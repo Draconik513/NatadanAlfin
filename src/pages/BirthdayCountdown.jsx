@@ -40,10 +40,12 @@ const BirthdayCountdown = ({ isIOS }) => {
   const handleReplySubmit = (e) => {
     e.preventDefault();
     if (replyMessage.trim()) {
-      const replies = JSON.parse(localStorage.getItem("birthdayReplies") || "[]");
+      const replies = JSON.parse(
+        localStorage.getItem("birthdayReplies") || "[]"
+      );
       replies.push({
         message: replyMessage,
-        date: new Date().toLocaleString()
+        date: new Date().toLocaleString(),
       });
       localStorage.setItem("birthdayReplies", JSON.stringify(replies));
       setReplyMessage("");
@@ -60,7 +62,7 @@ const BirthdayCountdown = ({ isIOS }) => {
         className="text-center max-w-2xl"
       >
         <h1 className="text-4xl md:text-5xl font-bold text-pink-600 mb-8">
-          The Birthday of <span className="text-purple-600">Tri Pratiwi</span>
+          The Beautiful Girl Ever <span className="text-purple-600">My lovely Nata</span>
         </h1>
 
         <div className="mb-8">
@@ -72,39 +74,17 @@ const BirthdayCountdown = ({ isIOS }) => {
             webkit-playsinline="true"
             x-webkit-airplay="allow"
             className="w-full max-w-md mx-auto rounded-lg shadow-xl"
-            style={{ transform: 'translateZ(0)' }}
+            style={{ transform: "translateZ(0)" }}
           >
             <source src={VidioCount} type="video/mp4" />
           </video>
         </div>
 
-        <div className="mb-12">
-          <h2 className="text-2xl text-pink-600 mb-4">Menuju Hari Spesialmu</h2>
-          <div className="flex justify-center space-x-2 md:space-x-4">
-            {Object.entries(timeLeft).map(([unit, value]) => (
-              <motion.div
-                key={unit}
-                whileHover={{ scale: isIOS ? 1 : 1.1 }}
-                className="bg-white p-4 rounded-lg shadow-md text-center min-w-[70px] border border-pink-100"
-              >
-                <div className="text-3xl font-bold text-pink-600">
-                  {value.toString().padStart(2, '0')}
-                </div>
-                <div className="text-sm text-pink-500 uppercase">
-                  {unit === 'days' ? 'hari' : 
-                   unit === 'hours' ? 'jam' : 
-                   unit === 'minutes' ? 'menit' : 'detik'}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
         <div className="bg-white p-6 rounded-xl shadow-lg mb-8 border border-pink-100">
           <h3 className="text-xl font-semibold text-purple-600 mb-2">
-            📅 10 Agustus 2025
+            📅 13 Agustus 2025
           </h3>
-          <p className="text-pink-600">Tanggal dimana senyumanmu akan menerangi hariku</p>
+          <p className="text-pink-600">I always love you… more than words can ever say, more than time can ever count, and more than you ll ever know. 💖 </p>
         </div>
 
         <div className="flex flex-col space-y-4">
@@ -113,18 +93,17 @@ const BirthdayCountdown = ({ isIOS }) => {
             whileTap={{ scale: 0.95 }}
             onClick={() => setShowReplyForm(true)}
             className="relative overflow-hidden bg-pink-500 text-white px-6 py-3 rounded-full shadow-lg"
-
           >
             <span className="button-text flex items-center justify-center">
               <span className="mr-2">💝</span>
               Tinggalkan Pesan Mu Sayang
             </span>
           </motion.button>
-          
+
           <motion.button
             whileHover={{ scale: isIOS ? 1 : 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => navigate('/reply')}
+            onClick={() => navigate("/reply")}
             className="relative overflow-hidden bg-white text-pink-600 border-2 border-pink-300 px-6 py-3 rounded-full shadow-lg"
           >
             <span className="button-text flex items-center justify-center">
@@ -142,14 +121,16 @@ const BirthdayCountdown = ({ isIOS }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
-            style={{ WebkitBackfaceVisibility: 'hidden' }}
+            style={{ WebkitBackfaceVisibility: "hidden" }}
           >
             <motion.div
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               className="bg-white rounded-xl p-6 w-full max-w-md border border-pink-200"
             >
-              <h3 className="text-xl font-bold text-pink-600 mb-4">Pesan Untuk Pacarmu</h3>
+              <h3 className="text-xl font-bold text-pink-600 mb-4">
+                Pesan Untuk Pacarmu
+              </h3>
               <form onSubmit={handleReplySubmit}>
                 <textarea
                   value={replyMessage}

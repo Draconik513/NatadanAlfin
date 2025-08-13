@@ -21,7 +21,7 @@ const HomePage = ({ isIOS }) => {
         >
           <p className="text-lg text-pink-600 pt-4">Untuk yang tersayang</p>
           <h1 className="text-4xl font-extrabold bg-gradient-to-r from-pink-600 via-pink-400 to-purple-500 text-transparent bg-clip-text drop-shadow-md">
-            Tri Pratiwi
+            Nataa
           </h1>
         </motion.div>
 
@@ -46,7 +46,7 @@ const HomePage = ({ isIOS }) => {
               webkit-playsinline="true"
               x-webkit-airplay="allow"
               className="w-full h-full object-cover"
-              style={{ transform: 'translateZ(0)' }}
+              style={{ transform: "translateZ(0)" }}
             />
           </div>
         </motion.div>
@@ -58,19 +58,20 @@ const HomePage = ({ isIOS }) => {
           className="space-y-6"
         >
           <h2 className="text-3xl font-bold text-pink-600">
-            Selamat Ulang Tahun Sayang!
+            I LOVE UU SO MUCH HONEY
           </h2>
-          <p className="text-xl text-pink-600">🎉 10 Agustus 2025 🎉</p>
+          <p className="text-xl text-pink-600">❤️ 13 Agustus 2025 ❤️🌹</p>
 
           <div className="mt-8 p-4 bg-white/80 backdrop-blur-sm rounded-lg max-w-md mx-auto border border-pink-200">
             <p className="text-pink-800 italic">
-              "Untuk pacarku yang tercinta, di hari spesialmu ini aku ingin
-              mengucapkan... Terima kasih telah menjadi cahaya dalam hidupku.
-              Setiap detik bersamamu adalah anugerah."
+              "Untuk Nataku yang tercinta ❤️, aku ingin berkata… Kamu adalah
+              alasan kenapa aku tersenyum setiap hari 🌹. Setiap detik bersamamu
+              adalah momen yang tidak pernah ingin aku lepaskan ⏳. Kamu bukan
+              hanya bagian dari hidupku… kamu adalah seluruh hatiku 💖. Jadi
+              tetaplah di sini, di sisiku, karena aku tidak tahu bagaimana dunia
+              ini tanpa kamu 🫶."
             </p>
-            <p className="mt-4 text-right text-pink-600 font-medium">
-              - Nama Pacarmu
-            </p>
+            <p className="mt-4 text-right text-pink-600 font-medium">- Alfin</p>
           </div>
         </motion.div>
 
@@ -79,22 +80,7 @@ const HomePage = ({ isIOS }) => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
           className="mt-12"
-        >
-          <motion.button
-            whileHover={{ scale: isIOS ? 1 : 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={() => navigate("/gift")}
-
-            className="relative overflow-hidden bg-pink-500 text-white px-8 py-4 rounded-full shadow-lg text-xl font-bold"
-
-          >
-            <span className="button-text flex items-center">
-              <span className="mr-2">🎁</span>
-              Buka Hadiah Spesial
-              <span className="ml-2">🎁</span>
-            </span>
-          </motion.button>
-        </motion.div>
+        ></motion.div>
       </div>
     </div>
   );

@@ -63,7 +63,6 @@ import HomePage from './pages/HomePage'
 import BirthdayCountdown from './pages/BirthdayCountdown'
 import SpecialWishes from './pages/SpecialWishes'
 import Memories from './pages/Memories'
-import CakeCelebration from './pages/CakeCelebration'
 import GiftWrapper from './pages/GiftWrapper'
 import ReplyPage from './pages/ReplyPage'
 import Navigation from './components/Navigation'
@@ -101,16 +100,8 @@ function App() {
           <Route path="/countdown" element={<PageTransition><BirthdayCountdown isIOS={isIOS} /></PageTransition>} />
           <Route path="/wishes" element={<PageTransition><SpecialWishes isIOS={isIOS} /></PageTransition>} />
           <Route path="/memories" element={<PageTransition><Memories isIOS={isIOS} /></PageTransition>} />
-          <Route path="/gift" element={<PageTransition><GiftWrapper isIOS={isIOS} /></PageTransition>} />
           <Route path="/reply" element={<PageTransition><ReplyPage isIOS={isIOS} /></PageTransition>} />
-          <Route 
-            path="/celebration" 
-            element={
-              countdownFinished ? 
-              <PageTransition><CakeCelebration isIOS={isIOS} /></PageTransition> : 
-              <PageTransition><BirthdayCountdown isIOS={isIOS} /></PageTransition>
-            } 
-          />
+          
         </Routes>
       </div>
     </Router>
