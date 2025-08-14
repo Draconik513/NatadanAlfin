@@ -34,7 +34,7 @@ const Memories = ({ isIOS }) => {
           className="bg-white bg-opacity-90 backdrop-blur-sm p-6 rounded-xl shadow-lg mb-8 border border-pink-100"
         >
           <h2 className="text-2xl font-semibold text-rose-600 mb-4">
-            Permintaan Maafku di Hari Ulang Tahunmu
+            Permintaan Maafku sayang:(
           </h2>
 
           <div className="text-left text-pink-800 space-y-4 leading-relaxed">
